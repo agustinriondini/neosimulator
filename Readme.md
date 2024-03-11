@@ -1,4 +1,11 @@
 =================================================
+## Update- Version v1.0.1 build#2 (11032024)
+
+-[Bugfix] Solucionado. Boton de powerTV ahora apaga completamente el tv.
+-[Update] Actualizada la version
+-[Update] Actualizado el readme.md
+
+=================================================
 ## Primera publicacion v1.0.0 build#1 fase betta (date 11032024)
 
 -[Release] version first_release_public-betta-v1.0.0_build#1.

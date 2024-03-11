@@ -28,6 +28,8 @@ videoPlayer.remove();
 } else {
 tvDisplay.innerHTML = '';
 ledNotif.style.boxShadow = "0px 0px 10px red";
+tvDisplay.style.boxShadow = '';
+tvDisplay.style.backgroundImage = '';
 isTVOn = false;
 }
 }

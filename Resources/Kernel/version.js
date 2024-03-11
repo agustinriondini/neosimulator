@@ -2,7 +2,7 @@ $(document).ready(function() {
     console.log('Script cargado correctamente.');
 
     var actualver = $('#updateVer').text();
-    var lastUpdate = "first_release_public-betta-v1.0.0_build#1";
+    var lastUpdate = "public_release-betta-v1.0.1_build#2(11032024)";
 
     console.log('Valor actual:', actualver);
 
