@@ -1,0 +1,66 @@
+@keyframes fade-in {
+    from {
+    opacity: 0;
+    transform: translateY(-20px);
+    }
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+}
+.main{
+    width: 100lvw;
+    min-width: 300px;
+    max-width: 1000px;
+    height: auto;
+    min-height: fit-content;
+    max-height: max-content;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    flex-wrap: wrap;
+    animation: aparecer 1s ease-out;
+    opacity: 1;
+}
+.instrucciones_title{
+    color: #fff;
+    text-align: center;
+    margin: 1rem auto;
+    text-decoration: double underline;
+}
+.instrucciones_container{
+    width: 90%;
+    min-width: 270px;
+    max-width: 900px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+.instrucciones_container>ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-direction: column;
+}
+.instrucciones_container>ul>li{
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5rem;
+}
+.instrucciones_container>ul>li>a{
+    font-size: 1rem;
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto 0.5rem;
+}
+.instrucciones_container>ul>li>a:hover{
+    color: greenyellow;
+}

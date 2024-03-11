@@ -1,0 +1,280 @@
+@keyframes fade-in {
+from {
+opacity: 0;
+transform: translateY(-20px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+/*barra sonido*/
+.soundbarContainer{
+width: 50%;
+min-width: 150px;
+max-width: 500px;
+height: 2vh;
+min-height: 30px;
+max-height: 90px;
+background-color: #000;
+display: flex;
+margin: 4rem auto 0;
+justify-content: space-evenly;
+align-items: center;
+border: solid 0.1rem white;
+border-radius: 25px;
+opacity: 0; 
+animation: fade-in 2.3s ease-out forwards;
+}
+.speaker{
+height: 80%;
+aspect-ratio: 1/1;
+display: flex;
+background-color: white;
+border-radius: 50%;
+align-items: center;
+margin: auto;
+justify-content: center;
+}
+.speakerCore{
+height: 0.5rem;
+aspect-ratio: 1/1;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 25px;
+border: solid 5px black;
+}
+.speakerTm{
+display: flex;
+align-items: center;
+justify-content: center;
+margin: auto;
+}
+.speakerTag{
+color: white;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+font-weight: lighter;
+text-shadow: 2px 2px black;
+font-style: italic;
+}
+
+/*decoracion estante*/
+.libraryProjects{
+width: 80%;
+min-width: 300px;
+max-width: 800px;
+height: 10vh;
+min-height: 100px;
+max-height: 300px;
+margin: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+border: solid 0.8rem;
+border-image: url(../Images/Texturas/madera_estante.jpg) 99 repeat;
+box-shadow: 0 0 100px rgba(255, 255, 255, 0.5);
+z-index: 0;
+/*luz interna*/
+background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
+opacity: 0; 
+animation: fade-in 2.3s ease-out forwards;
+}
+@media (max-width: 500px) {
+.arbolito, .arbolPic, .consola, .consolaPic{
+display: none;
+}
+.libraryProjects, .gamesContainer{
+width: 90lvw;
+max-width: 400px;
+}
+
+}
+@media screen and (min-width: 501px) and (max-width: 768px) {
+.libraryProjects, .gamesContainer{
+width: 90lvw;
+max-width: 668px;
+}
+
+}
+
+.arbolito{
+width: 10%;
+min-width: 90px;
+max-width: 270px;
+height: 90%;
+min-height: 90px;
+max-height: 270px;
+display: flex;
+justify-content: left;
+align-items: center;
+margin: 0 auto;
+margin-bottom: 0px;
+z-index: 0;
+}
+.arbolPic{
+width: 10%;
+min-width: 90px;
+max-width: 270px;
+height: 90%;
+min-height: 90px;
+max-height: 270px;
+object-fit: contain;
+filter: brightness(90%);
+cursor: not-allowed;
+z-index: 0;
+}
+.consola{
+width: 10%;
+min-width: 90px;
+max-width: 270px;
+height: 90%;
+min-height: 90px;
+max-height: 270px;
+display: flex;
+justify-content: right;
+align-items: center;
+margin: auto 0;
+margin-bottom: 0px;
+z-index: 0;
+}
+.consolaPic{
+width: 10%;
+min-width: 90px;
+max-width: 270px;
+height: 90%;
+min-height: 90px;
+max-height: 270px;
+object-fit: contain;
+filter: brightness(90%);
+cursor: not-allowed;
+z-index: 0;
+}
+.gamesContainer{
+width: 80%;
+display: flex;
+justify-content: center;
+align-items: center;
+min-width: fit-content;
+max-width: 800px;
+}
+/*en biblioteca guardado*/
+/* Estilos para el gameBox */
+.gameBox {
+background-color: rgba(0, 0, 0, 0.5);
+width: auto;
+min-width: 30px;
+max-width: 50px;
+height: auto;
+min-height: 90px;
+max-height: 150px;
+display: flex;
+z-index: 1;
+align-items: center;
+margin: 0;
+justify-content: center;
+border-right: solid 2px black;
+}
+
+.projectOnLibrary{
+display: flexbox;
+}
+.projectOnLibraryTitle {
+transform: rotate(-90deg);
+color: #fff;
+
+
+}
+.projectExpanded {
+display: none;
+width: 0;
+
+}
+
+
+.gameBox:hover .projectExpanded, .coverContainer {
+display: flex;
+position: absolute;
+width: 100%;
+min-width: 110px;
+max-width: 220px;
+height: 90%;
+background-color: #000;
+align-items: center;
+justify-content: center;
+z-index: 1;
+min-height: 90px;
+max-height: 150px;
+cursor: pointer;
+margin: auto;
+animation: fade-in 1s ease-out forwards;
+}
+.leftCover,
+.rightCover,
+.cdContainer {
+width: 50%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+flex-direction: column;
+z-index: 1;
+
+}
+
+.projectThumbail {
+border-radius: 50%;
+aspect-ratio: 1/1;
+width: 100%;
+min-width: 40px;
+max-width: 80px;
+margin-top: 10px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+z-index: 1;
+margin: auto;
+}
+
+.projectLinkContainer {
+margin-top: 10px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+z-index: 1;
+margin: auto;
+}
+
+.stableBtn{
+padding: 0.2rem;
+background-color: #007bff;
+color: #fff;
+text-decoration: none;
+border-radius: 5px;
+display: flex;
+margin-top: 5px;
+width: 100%;
+min-width: fit-content;
+max-width: max-content;
+text-align: center;
+align-items: center;
+cursor: pointer;
+}
+.projectLinkImg{
+width: 1rem;
+min-width: 16px;
+aspect-ratio: 1/1;
+display: flex;
+align-items: center;
+margin: auto;
+justify-content: center;
+background-color: #fff;
+border-radius: 50%;
+}
+.stableBtn:hover{
+background-color: #01458e;
+}
+.stableBtn:active{
+cursor: progress;
+}

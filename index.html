@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+    <html lang="es-AR">
+        <head>
+            <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=7">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="description" content="JAR Games">
+            <meta name="keywords" content="Jar games, jarsoft, agustinriondini">
+            <!--CSS-->
+            <link rel="stylesheet" href="./Resources/UI/reset.css">
+            <link rel="stylesheet" href="./Resources/UI/menu.css">
+            <link rel="stylesheet" href="./Resources/TV/tvdisplay.css">
+            <link rel="stylesheet" href="./Resources/UI/estante.css">
+            <link rel="stylesheet" href="./Resources/UI/footer.css">
+            <!--Librerias JQuery-->
+            <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+            <!--Errores callback-->
+            <script src="./Resources/Kernel/allErrors.js"></script>
+            <!--JAR-Services-->
+            <script src="./Resources/Kernel/tvEnhaner.js"></script>
+            <script src="./Resources/Kernel/expand.js"></script>
+            <script src="./Resources/Kernel/version.js"></script>
+            <script src="./Resources/Kernel/pushGame.js"></script>
+            <title>JARSoft | Gamestation</title>
+            <link rel="shortcut icon" href="./Resources/Images/Meta/controlador.png" type="image/x-icon">
+        </head>
+        <body>
+            <!--Menu-->
+            <div class="commandCenter">
+                <button class="logoContainer" id="toggleMenu" hidden>|||</button><!--sera usado como menu toggle-->
+                <div class="navContainer" id="navContainer">
+                    <nav>
+                        <ul>
+                            <li><a href="https://agustinriondini.github.io/portfolioevolved/" target="_blank">Ir al Portfolio</a></li>
+                            <li><a href="#helpDesk">Centro de ayuda</a></li>
+                        </ul>
+                    </nav> 
+                </div>
+            </div>
+            <main>
+                <section id="tvSection">
+                    <div id="tvContainer">
+                        <div id="tvDisplay"></div>
+                        <div id="ledNotif"></div>
+                        <div id="tvButtons">
+                            <button id="tvPower" class="tvBtn" onclick="powerTV()">◉</button>
+                            <button id="tvReboot" class="tvBtn" onclick="rebootTV()">↺</button>
+                            <button id="tvResize" class="tvBtn" onclick="maxTv()">↗</button>
+                            <button id="tvHome" class="tvBtn"  onclick="showalert(event)">▣</button><!--homeAction() nombre de la funcion final-->
+                        </div>
+                    </div>
+                </section>
+                <section id="soundbar">
+                    <div class="soundbarContainer">
+                        <div class="speaker">
+                            <div class="speakerCore"></div>
+                        </div>
+                        <div class="speakerTm">
+                            <h6 class="speakerTag">JAR SOUNDBAR</h6>
+                        </div>
+                        <div class="speaker">
+                            <div class="speakerCore"></div>
+                        </div>
+                    </div>
+                </section>
+                <div class="libraryProjects">
+                    <div class="arbolito">
+                        <img src="./Resources/Images/Texturas/planta.png" alt="arbol" class="arbolPic">
+                    </div>
+                    <div class="gamesContainer">
+                        <div class="gameBox">
+                            <div class="projectOnLibrary">
+                                <h4 class="projectOnLibraryTitle">Ahorcado</h4>
+                            </div>
+                            <div class="projectExpanded">
+                                <div class="coverContainer">
+                                    <div class="leftCover">
+                                        <button id="playGame" class="stableBtn" onclick="playGameOnTv()">▶ Jugar</button>
+                                        <a href="https://github.com/agustinriondini/Ahorcado/blob/master/README.md" target="_blank" class="stableBtn">Version</a>
+                                    </div>
+                                    <div class="rightCover">
+                                        <div class="cdContainer">
+                                            <img src="./Resources/Images/Texturas/cd.jpg" alt="Carátula del juego" class="projectThumbail">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="consola">
+                        <img src="./Resources/Images/Texturas/xbox.png" class="consolaPic">
+                    </div>
+                </div>
+                </section>
+            </main>
+        </body>
+        <footer id="allFooter">
+            <div class="footerContainer">
+                <div class="footerBoxes">
+                    <ul>
+                        <li><a href="https://www.facebook.com/agustin.riondini.94/"><img src="./Resources/Images/Meta/facebook.png" alt="facebook_icon" class="socialPic">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/agustinriondini/"><img src="./Resources/Images/Meta/instagram.png" alt="instagram_icon" class="socialPic">Instagram</a></li>
+                        <li><a href="https://github.com/agustinriondini"><img src="./Resources/Images/Meta/github.png" alt="github_icon" class="socialPic">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/juan-agustin-riondini-2226a6195/"><img src="./Resources/Images/Meta/linkedin.png" alt="linkedin_icon" class="socialPic">LinkedIn</a></li>
+                    </ul>
+                </div>
+                <div class="footerBoxes" id="helpDesk">
+                    <ul>
+                        <li><a href="./Resources/Subdirs/instrucciones.html">¿Como jugar?</a></li>
+                        <li><a href="#" onclick="showalert(event)">Acerca del proyecto</a></li>
+                    </ul>
+                </div>
+                <div class="footerBoxes">
+                    <div class="buttonContainer">
+                        <a class="btn" href="mailto:juan.riondini@gmail.com">Contacto</a>
+                        <a class="btn" href="https://forms.gle/67McXcnE57ZMZUQGA" target="_blank">Reportar errores!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="version">
+                <span class="compilacion" id="updateVer">Corroborando version. Espere...</span>
+                <h6 class="jarsoft">JARSoft</h6>
+            </div>
+        </footer>
+    </html>
